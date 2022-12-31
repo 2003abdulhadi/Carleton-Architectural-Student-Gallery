@@ -1,0 +1,13 @@
+html
+  body
+    .header
+      logo Carleton Architectural Student Gallery
+      .header-right
+        a(href='/') Home
+        a(href='/collections') Collections
+        a(href='/artists') Artists
+        a(href='/workshops') Workshops
+        if (user)
+          a.active(href=`/artists/${user.username}`)= "Profile"
+        else
+          a.active(href='/login') Login

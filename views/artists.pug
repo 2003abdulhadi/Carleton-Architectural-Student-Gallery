@@ -1,0 +1,28 @@
+html
+    head
+        include ./head
+        title Artists
+    body
+        include ./header
+        .body
+            .header
+                logo Artists
+            .grid
+                div
+                    form
+                        label(for='name') Name:
+                        input(type='text', name='name', id='name', value=`${name}`)
+                        input(type='submit', value='Search', id='search', onclick='queryArtists')
+                div
+                    each artist, i in artists
+                        if i % 2 == 0
+                            p User: !{artist.username}
+                            p Artworks: !{artist.artworks.length}
+                            br
+                div
+                    each artist, i in artists
+                        if i % 2 == 1
+                            p User: !{artist.username}
+                            p Artworks: !{artist.artworks.length}
+                            br
+                            

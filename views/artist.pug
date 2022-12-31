@@ -1,0 +1,27 @@
+html
+    head
+        include ./head
+        title Username goes here
+    body
+        include ./header
+        .body
+            h1 Username in bold here
+            .grid
+                div
+                    p=account.username
+                    p workshops go here
+                div
+                    each item in account.artworks
+                        .imgView
+                            img(src=item.source alt=item.description)
+                        .image-containerAlt
+                            br
+                            a(href=`/artists/${item.artist}`) !{item.artist}
+                            p=item.name
+                            p=item.style
+                            p=item.medium
+                            p=item.description
+                            br
+                div
+                    p likes go here
+                            

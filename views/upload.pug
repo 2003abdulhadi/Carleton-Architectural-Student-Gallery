@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+  include ./head
+    title Submit Artwork
+  body
+    include ./header
+    .body
+        h2 Submit Artwork
+        .loginContainer
+            .login
+                .login.content
+                    label
+                        b
+                        | Name
+                    input(type='text', name='name', placeholder='Name', id='name')
+            .login
+                .login.content
+                    label
+                        b
+                        | Style
+                    input(type='text', name='style', placeholder='Style', id='style')
+            .login
+                .login.content
+                    label
+                        b
+                        | Medium
+                    input(type='text', name='medium', placeholder='Medium', id='medium')
+            .login
+                .login.content
+                    label
+                        b
+                        | Category
+                    input(type='text', name='category', placeholder='Category', id='category')
+            .login
+                .login.content
+                    label
+                        b
+                        | Description
+                    input(type='text', name='description', placeholder='Description', id='description')
+            .login
+                .login.content
+                    label
+                        b
+                        | Image Link
+                    input(type='text', name='link', placeholder='Link', id='link')
+            .login
+                .login.content
+                    input(type='button', name='submit', value='Submit', id='submit', onclick="submitArtwork()")
+                    br
+

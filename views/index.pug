@@ -1,0 +1,14 @@
+html(lang="en")
+    head
+        include ./head
+        title Art Gallery
+    body  
+        include ./header
+
+        .body
+            .header
+                logo Featured Artworks
+            .image-container
+                each item, i in collections
+                    a(href=`/collections/${item.name}`)
+                        img(src=item.source alt=item.description)

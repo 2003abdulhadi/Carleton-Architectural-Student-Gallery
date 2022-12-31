@@ -1,0 +1,37 @@
+html
+    head
+        include ./head
+        title Collections
+    body
+        include ./header
+        .body
+            .header
+                logo Collections
+                .header-right
+                    if(user)
+                        a.active(href='/upload') Add Your Work!
+                    else
+                        a.active(href='/login') Login to add your own
+            .grid
+                div
+                    form
+                        label(for='name') Name:
+                        input(type='text', name='name', id='name', value=`${query.name}`)
+                        label(for='artist') Artist:
+                        input(type='text', name='artist', id='artist', value=`${query.artist}`)
+                        label(for='style') Style:
+                        input(type='text', name='style', id='style', value=`${query.style}`)
+                        input(type='submit', value='Search', id='search', onclick='queryCollections')
+                .image-containerAlt
+                    each item, i in collections
+                        a(href=`/collections/${item.name}`)
+                            img(src=item.source alt=item.description)
+                .image-containerAlt
+                    each item, i in collections
+                        br
+                        a(href=`/artists/${item.artist}`) !{item.artist}
+                        p=item.name
+                        p=item.style
+                        p=item.medium
+                        p=item.description
+                        br

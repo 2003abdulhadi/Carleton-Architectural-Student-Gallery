@@ -1,0 +1,17 @@
+html
+    head
+        include ./head
+        title Collections
+    body
+        include ./header
+        .body
+            .imgView
+                img(src=collection.source alt=collection.description)
+            .image-containerAlt
+                br
+                a(href=`/artists/${collection.artist}`) !{collection.artist}
+                p=collection.name
+                p=collection.style
+                p=collection.medium
+                p=collection.description
+                br

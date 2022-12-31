@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+  include ./head
+    title Login Form
+  body
+    include ./header
+    .body
+        h2 Login Page
+        .loginContainer
+            .login
+                .login.content
+                    label
+                        b
+                        | User Name
+                    input(type='text', name='username', placeholder='Username', id='username')
+            .login
+                .login.content
+                    label
+                        b
+                        | Password
+                    input(type='password', name='password', placeholder='Password', id='password')
+            .login
+                .login.content
+                    input(type='button', name='register', value='Register', id='register', onclick="registerUser()")
+                    br
+            .login
+                a(href="/login") Already Regisered?
